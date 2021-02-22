@@ -1,0 +1,7 @@
+# que es dto 
+Los DTO son un tipo de objetos que sirven únicamente para transportar datos. EL DTO contiene las propiedades del objeto. Datos que pueden tener su origen en una o más entidades de información. Estos datos son incorporados a una instancia de un JavaBean. Y esta instancia puede ser pasada a través de la aplicación, localmente o, lo que es más importante, puede ser "serializada" y enviada a través de la red, de forma que los clientes puedan acceder a información del modelo desde un solo objeto y mediante una sola llamada.
+
+Un DTO normalmente no provee lógica de negocios o validaciones de ningún tipo. Solo provee acceso a las propiedades del bean. Algunos autores remarcan que el bean debe ser inmutable, dado que sus cambios no deben reflejarse en el sistema. Pero obviamente esto choca con la especificación de los JavaBean, que requiere que todos los atributos privados tengan sus métodos set y get. Es necesario definir un DTO por cada bean que exista en la aplicación.
+
+Con este modelo se obtiene, la separación entre el Controlador y el Modelo. Ante cualquier cambio que se diera en la forma de acceder a los datos, el modelo no se va a modificar ya que recibe el mismo DTO.
+
